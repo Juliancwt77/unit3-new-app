@@ -1,3 +1,46 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h1 {
+
+  color: red;
+
+  &:hover {
+
+    color: blue;
+  }
+
+}
+
+// @@mixin border-radius($radius) {
+//
+//   -webkit-border-radius: $radius;
+//      -moz-border-radius: $radius;
+//       -ms-border-radius: $radius;
+//           border-radius: $radius;
+//           background: $color;
+// }
+//
+// .box  {
+//   @include border-radius(10px, red);
+//   border: 10px solid blue;
+//
+// }
+//
+// .rectangle  {
+//   @include border-radius(20px, yellow);
+//   border: 10px solid red;
+//
+// }
+
+// span {
+//
+//   @extend .blue;
+//   border: 10px dotted red;
+//   padding: 10px
+//
+// }
