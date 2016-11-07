@@ -27,10 +27,12 @@ class UsersController < ApplicationController
 
   def create
      # debugger
-     @user = User.new(user_params)
-     @user.save
+     @user = User.create(user_params)
+    #  @user.save
     #  redirect_to @user
      redirect_to users_path
+    #  redirect_to root_path
+    
   end
 
 def update
