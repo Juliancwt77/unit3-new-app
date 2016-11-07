@@ -1,0 +1,88 @@
+-- HOW TO CREATE A TABLE
+
+-- CREATE TABLE <NAME OF TABLE > (
+-- FIELD NAME
+--
+-- )
+
+CREATE TABLE instructors (
+  id SERIAL NOT NULL,
+  name TEXT NOT NULL,
+  experience INT NOT NULL,
+  website VARCHAR(50) NOT NULL
+  )
+
+  CREATE TABLE students (
+    id SERIAL PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    age INT NOT NULL,
+    address VARCHAR(50)
+    )
+
+    -- INSERTING DATA TO TABLE
+    -- INSERT INTO table_name VALUES (val1, val2, val3)
+
+    INSERT INTO students
+    VALUES (
+      1,
+      'Glen Choo',
+      26,
+      '8 Claymore Hills'
+
+
+          )
+
+      -- FIND DATA
+      -- SELECT <FIELD NAME> FROM <TABLE_NAME>
+
+      SELECT name FROM students
+
+      -- select all info from students
+      SELECT * FROM students
+
+      -- BY A CERTAIN FIELD CONDITION
+      -- SELECT <FIELD_NAME> FROM <TABLE_NAME>
+      -- WHERE <FIELD_NAME> <CONDITION> <VALUE>
+
+      SELECT * FROM students
+      Where age > 20
+          -- ORDER BY <FILEDNAME> ASC/DESC
+      ORDER BY name ASC
+
+
+
+      -- UPDATE RECORD IN DB
+      -- UPDATE <TABLE_NAME> SET <FIELDNAME> = <VALUE>
+      -- SET <FIELDNAME> = <VALUE>
+      -- WHERE <ANOTHER_FIELDNAME> = <VALUE>
+
+      UPDATE students
+      SET age = 17
+      Where name = "Julian"
+
+
+      SELECT * FROM students
+      Where Address LIKE "%NY" OR Address LIKE "%DC"
+      -- "%NY%" - NY in between strings
+	     ORDER BY name DESC
+
+      --  SELECT * FROM <TABLENAME>
+      -- inner join <table2>
+      -- ON <tablename>.pk = <table2>.fk
+
+      SELECT * FROM students
+      INNER JOIN books
+      ON students.id = books.student_id
+
+      SELECT * FROM students, books
+      Where students.id = books.student_id
+
+    where books.id = 1
+
+      -- ALTER TABLE tablename
+      -- ADD name VARCHAR(50)
+
+      ALTER TABLE students
+      ADD parent_id text
+
+      UPDATE books SET name ="sth" where id > 0;
