@@ -10,5 +10,7 @@ def help
 
   @properties = Property.all
 
+  render layout: "admin"
+
 end
 end
